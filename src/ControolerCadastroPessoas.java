@@ -4,16 +4,16 @@ import java.awt.event.ActionListener;
 
 public class ControolerCadastroPessoas implements ActionListener {
 
-	private apresentacao FCadastroPessoas;
+	private Apresentacao FCadastroPessoas;
 	private ModelCadastroPEssoas Cadastrar;
 
 	public ControolerCadastroPessoas() throws Exception {
-		FCadastroPessoas = new apresentacao();
+		FCadastroPessoas = new Apresentacao();
 		Cadastrar = new ModelCadastroPEssoas();
-		LigaEventos();
+		ligaEventos();
 	}
 
-	private void LigaEventos() {
+	private void ligaEventos() {
 		FCadastroPessoas.Gravar.addActionListener(this);
 		FCadastroPessoas.Pesquisar.addActionListener(this);
 		FCadastroPessoas.Excluir.addActionListener(this);
@@ -23,26 +23,26 @@ public class ControolerCadastroPessoas implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (FCadastroPessoas.Pesquisar == e.getSource()) {
-			PesquisaDados();
+			pesquisaDados();
 
 		}
 		if (FCadastroPessoas.Gravar == e.getSource()) {
-			GravaDados();
+			gravaDados();
 
 		}
 
 		if (FCadastroPessoas.Excluir == e.getSource()) {
-			ExcluirDados();
+			excluirDados();
 		}
 	}
 
-	private void GravaDados() {
+	private void gravaDados() {
 	}
 
-	private void ExcluirDados() {
+	private void excluirDados() {
 	}
 
-	private void PesquisaDados() {
+	private void pesquisaDados() {
 	}
 
 }

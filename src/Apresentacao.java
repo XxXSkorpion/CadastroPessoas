@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 
-public class apresentacao extends JFrame {
+public class Apresentacao extends JFrame {
 	JButton Gravar;
 	JButton Pesquisar;
 	JButton Excluir;
