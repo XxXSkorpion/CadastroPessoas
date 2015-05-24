@@ -5,6 +5,13 @@ public class Pessoa implements Serializable {
 	private String rg;
 	private String cpf;
 	private String email;
+	
+	public Pessoa(String nome, String cpf, String rg, String email) {
+		this.setCpf(cpf);
+		this.setEmail(email);
+		this.setNome(nome);
+		this.setRg(rg);
+	}
 
 	public String getNome() {
 		return nome;
@@ -41,12 +48,4 @@ public class Pessoa implements Serializable {
 	public String toString(){
 		return "Nome: " + this.nome + "\nCPF: " + this.cpf + "\nRG: " + this.rg + "\nE-mail: " + this.email;
 	}
-	
-	public Pessoa(String nome, String cpf, String rg, String email) {
-		this.setCpf(cpf);
-		this.setEmail(email);
-		this.setNome(nome);
-		this.setRg(rg);
-	}
-
 }
