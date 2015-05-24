@@ -1,17 +1,17 @@
 import java.io.Serializable;
 
 public class Pessoa implements Serializable {
-	private String Nome;
+	private String nome;
 	private String rg;
 	private String cpf;
 	private String email;
 
 	public String getNome() {
-		return Nome;
+		return nome;
 	}
 
 	public void setNome(String nome) {
-		Nome = nome;
+		this.nome = nome;
 	}
 
 	public String getRg() {
@@ -38,6 +38,10 @@ public class Pessoa implements Serializable {
 		this.email = email;
 	}
 
+	public String toString(){
+		return "Nome: " + this.nome + "\nCPF: " + this.cpf + "\nRG: " + this.rg + "\nE-mail: " + this.email;
+	}
+	
 	public Pessoa(String nome, String cpf, String rg, String email) {
 		this.setCpf(cpf);
 		this.setEmail(email);
